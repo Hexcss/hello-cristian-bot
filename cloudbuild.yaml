@@ -1,0 +1,17 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/gcloud'
+    entrypoint: 'gcloud'
+    args:
+      - 'functions'
+      - 'deploy'
+      - 'sendScheduledGif'
+      - '--runtime=nodejs20'
+      - '--trigger-http'
+      - '--region=europe-west1'
+      - '--set-env-vars=DISCORD_WEBHOOK_URL=${_DISCORD_WEBHOOK_URL}'
+
+substitutions:
+  _DISCORD_WEBHOOK_URL: ''
+
+options:
+  logging: CLOUD_LOGGING_ONLY
