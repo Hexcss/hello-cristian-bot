@@ -1,9 +1,13 @@
 {
-  "name": "discord-scheduler-gif",
-  "version": "1.0.0",
-  "description": "Sends a scheduled GIF to a Discord webhook.",
-  "main": "index.js",
-  "dependencies": {
-    "node-fetch": "^2.6.7"
-  }
+    "name": "discord-scheduler-gif",
+    "version": "1.0.0",
+    "description": "Sends a scheduled GIF to a Discord webhook.",
+    "main": "index.js",
+    "scripts": {
+        "start": "functions-framework --target=sendScheduledGif"
+    },
+    "dependencies": {
+        "@google-cloud/functions-framework": "^4.0.0",
+        "node-fetch": "^2.6.7"
+    }
 }
